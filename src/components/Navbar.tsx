@@ -17,6 +17,7 @@ export default function Navbar() {
   const router = useRouter();
   const pathname = usePathname();
   const currentLang = languages.find(l => l.code === locale) || languages[0];
+  console.log('Navbar locale:', locale, 'home:', t('home'));
 
   // No need for handleChangeLang, use <Link> for locale switching
 
