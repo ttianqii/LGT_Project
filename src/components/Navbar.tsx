@@ -4,7 +4,7 @@ import { Home, Newspaper, Settings, Phone, Menu } from "lucide-react";
 export default function Navbar() {
   return (
     <div className="fixed top-4 left-1/2 transform -translate-x-1/2 z-50 w-11/12 max-w-6xl">
-      <div className="navbar min-h-[56px] py-0 bg-gradient-to-r from-blue-600 via-blue-700 to-blue-800 text-white shadow-2xl rounded-3xl border border-blue-400/30 backdrop-blur-sm">
+      <div className="navbar min-h-[44px] py-0 bg-gradient-to-r from-blue-600 via-blue-700 to-blue-800 text-white shadow-2xl rounded-3xl border border-blue-400/30 backdrop-blur-sm">
         <div className="navbar-start">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden text-white hover:bg-white/20 rounded-2xl transition-all duration-300 hover:scale-105">
@@ -40,15 +40,15 @@ export default function Navbar() {
             </ul>
           </div>
           {/* Logo */}
-          <div className="flex items-center ml-2 h-14">
-            <div className="relative h-12 w-[110px] flex items-center">
+          <div className="flex items-center ml-2 h-12">
+            <div className="relative h-11 w-[120px] flex items-center">
               <div className="absolute inset-0 bg-white/20 rounded-xl blur-sm"></div>
               <Image
                 src="/img/logo2.png"
                 alt="Company Logo"
-                width={110}
-                height={48}
-                className="rounded-xl object-contain relative z-10 transition-all duration-300 hover:scale-105 h-12 w-[110px]"
+                width={120}
+                height={44}
+                className="rounded-xl object-contain relative z-10 transition-all duration-300 hover:scale-105 h-11 w-[120px]"
               />
             </div>
           </div>
