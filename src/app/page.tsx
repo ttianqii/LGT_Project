@@ -8,7 +8,7 @@ export default function Home() {
       <Navbar />
 
       {/* Hero Section */}
-      <div className="hero min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+      <div className="hero min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 pt-20">
         <div className="hero-content text-center">
           <div className="max-w-md">
             <h1 className="text-5xl font-bold text-gray-800">Welcome!</h1>

@@ -1,61 +1,92 @@
 import Image from "next/image";
+import { Home, Newspaper, Settings, Phone, Menu } from "lucide-react";
 
 export default function Navbar() {
   return (
-    <div className="navbar bg-blue-600 text-white shadow-lg">
-      <div className="navbar-start">
-        <div className="dropdown">
-          <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden text-white hover:bg-blue-700">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-5 w-5"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor">
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M4 6h16M4 12h8m-8 6h16" />
-            </svg>
+    <div className="fixed top-4 left-1/2 transform -translate-x-1/2 z-50 w-11/12 max-w-6xl">
+      <div className="navbar bg-gradient-to-r from-blue-600 via-blue-700 to-blue-800 text-white shadow-2xl rounded-3xl border border-blue-400/30 backdrop-blur-sm">
+        <div className="navbar-start">
+          <div className="dropdown">
+            <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden text-white hover:bg-white/20 rounded-2xl transition-all duration-300 hover:scale-105">
+              <Menu className="h-6 w-6" />
+            </div>
+            <ul
+              tabIndex={0}
+              className="menu menu-sm dropdown-content bg-gradient-to-b from-blue-600 to-blue-800 rounded-3xl z-[1] mt-3 w-60 p-3 shadow-2xl text-white border border-blue-400/30 backdrop-blur-sm">
+              <li>
+                <a className="hover:bg-white/20 rounded-2xl py-3 px-4 transition-all duration-300 hover:scale-105 font-medium flex items-center gap-3">
+                  <Home className="h-5 w-5" />
+                  Home
+                </a>
+              </li>
+              <li>
+                <a className="hover:bg-white/20 rounded-2xl py-3 px-4 transition-all duration-300 hover:scale-105 font-medium flex items-center gap-3">
+                  <Newspaper className="h-5 w-5" />
+                  News
+                </a>
+              </li>
+              <li>
+                <a className="hover:bg-white/20 rounded-2xl py-3 px-4 transition-all duration-300 hover:scale-105 font-medium flex items-center gap-3">
+                  <Settings className="h-5 w-5" />
+                  Services
+                </a>
+              </li>
+              <li>
+                <a className="hover:bg-white/20 rounded-2xl py-3 px-4 transition-all duration-300 hover:scale-105 font-medium flex items-center gap-3">
+                  <Phone className="h-5 w-5" />
+                  Contact Us
+                </a>
+              </li>
+            </ul>
           </div>
-          <ul
-            tabIndex={0}
-            className="menu menu-sm dropdown-content bg-blue-600 rounded-box z-[1] mt-3 w-52 p-2 shadow text-white">
-            <li><a className="hover:bg-blue-700">Home</a></li>
-            <li><a className="hover:bg-blue-700">About</a></li>
-            <li><a className="hover:bg-blue-700">Services</a></li>
-            <li><a className="hover:bg-blue-700">Portfolio</a></li>
-            <li><a className="hover:bg-blue-700">Contact</a></li>
+          {/* Logo */}
+          <div className="flex items-center ml-2">
+            <div className="relative">
+              <div className="absolute inset-0 bg-white/20 rounded-xl blur-sm"></div>
+              <Image
+                src="/img/logo2.png"
+                alt="Company Logo"
+                width={140}
+                height={100}
+                className="rounded-xl object-contain relative z-10 transition-all duration-300 hover:scale-105"
+              />
+            </div>
+          </div>
+        </div>
+        <div className="navbar-center hidden lg:flex">
+          <ul className="menu menu-horizontal px-2 text-white">
+            <li>
+              <a className="hover:bg-white/20 rounded-2xl px-6 py-3 transition-all duration-300 hover:scale-105 font-medium text-lg relative group flex items-center gap-2">
+                <Home className="h-5 w-5" />
+                Home
+                <span className="absolute bottom-0 left-1/2 w-0 h-0.5 bg-white transition-all duration-300 group-hover:w-3/4 group-hover:left-1/8"></span>
+              </a>
+            </li>
+            <li>
+              <a className="hover:bg-white/20 rounded-2xl px-6 py-3 transition-all duration-300 hover:scale-105 font-medium text-lg relative group flex items-center gap-2">
+                <Newspaper className="h-5 w-5" />
+                News
+                <span className="absolute bottom-0 left-1/2 w-0 h-0.5 bg-white transition-all duration-300 group-hover:w-3/4 group-hover:left-1/8"></span>
+              </a>
+            </li>
+            <li>
+              <a className="hover:bg-white/20 rounded-2xl px-6 py-3 transition-all duration-300 hover:scale-105 font-medium text-lg relative group flex items-center gap-2">
+                <Settings className="h-5 w-5" />
+                Services
+                <span className="absolute bottom-0 left-1/2 w-0 h-0.5 bg-white transition-all duration-300 group-hover:w-3/4 group-hover:left-1/8"></span>
+              </a>
+            </li>
           </ul>
         </div>
-        {/* Logo */}
-        <div className="flex items-center">
-          <Image
-            src="/img/logo2.png"
-            alt="Company Logo"
-            width={140}
-            height={100}
-            className="rounded-lg object-contain"
-          />
+        <div className="navbar-end mr-2">
+          <button className="btn bg-white text-blue-700 hover:bg-blue-50 hover:text-blue-800 rounded-2xl transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 font-semibold text-lg px-8 py-3 border-0 relative overflow-hidden group">
+            <span className="absolute inset-0 bg-gradient-to-r from-blue-100 to-white opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
+            <span className="relative z-10 flex items-center gap-2">
+              <Phone className="h-5 w-5" />
+              Contact Us
+            </span>
+          </button>
         </div>
-      </div>
-      <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal px-1 text-white">
-          <li><a className="hover:bg-blue-700 rounded-lg">Home</a></li>
-          <li><a className="hover:bg-blue-700 rounded-lg">About</a></li>
-          <li><a className="hover:bg-blue-700 rounded-lg">Services</a></li>
-          <li><a className="hover:bg-blue-700 rounded-lg">Portfolio</a></li>
-          <li><a className="hover:bg-blue-700 rounded-lg">Contact</a></li>
-        </ul>
-      </div>
-      <div className="navbar-end">
-        <button className="btn btn-outline btn-white mr-2 hover:bg-white hover:text-blue-600">
-          Sign In
-        </button>
-        <button className="btn bg-white text-blue-600 hover:bg-gray-100">
-          Get Started
-        </button>
       </div>
     </div>
   );
