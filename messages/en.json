@@ -5,5 +5,11 @@
     "news": "News",
     "services": "Services",
     "contact": "Contact"
+  },
+  "Home": {
+    "welcome": "Welcome!",
+    "desc": "Discover our new features and components designed to enhance your web experience.",
+    "explore": "Explore Now",
+    "features": "Features & Components"
   }
 }

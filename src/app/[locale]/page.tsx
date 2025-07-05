@@ -1,7 +1,10 @@
+
+import { useTranslations } from 'next-intl';
 import Image from "next/image";
 import Navbar from "@/components/Navbar";
 
 export default function Home() {
+  const t = useTranslations('Home');
   return (
     <div className="min-h-screen bg-base-100">
       {/* Blue Navbar with Logo */}
@@ -11,12 +14,12 @@ export default function Home() {
       <div className="hero min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 pt-20">
         <div className="hero-content text-center">
           <div className="max-w-md">
-            <h1 className="text-5xl font-bold text-gray-800">Welcome!</h1>
+            <h1 className="text-5xl font-bold text-gray-800">{t('welcome')}</h1>
             <p className="py-6 text-gray-600">
-              สวัสกดีครับ! Discover our new features and components designed to enhance your web experience.
+              {t('desc')}
             </p>
             <button className="btn bg-blue-600 text-white hover:bg-blue-700 border-none">
-              Explore Now
+              {t('explore')}
             </button>
           </div>
         </div>
@@ -25,7 +28,7 @@ export default function Home() {
       {/* Content Section */}
       <div className="container mx-auto p-8">
         <h2 className="text-3xl font-bold text-center mb-8 text-gray-800">
-          Features & Components
+          {t('features')}
         </h2>
         {/* Feature Cards */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">

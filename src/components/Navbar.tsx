@@ -3,6 +3,7 @@ import Image from "next/image";
 import { Home, Newspaper, Settings, Phone, Menu } from "lucide-react";
 import { useTranslations, useLocale } from 'next-intl';
 import { useRouter, usePathname } from 'next/navigation';
+import Link from 'next/link';
 
 const languages = [
   { code: "en", label: "English", flag: "/flags/eng.png" },
@@ -17,16 +18,7 @@ export default function Navbar() {
   const pathname = usePathname();
   const currentLang = languages.find(l => l.code === locale) || languages[0];
 
-  const handleChangeLang = (lng: string) => {
-    const segments = pathname.split('/');
-    if (languages.some(l => l.code === segments[1])) {
-      segments[1] = lng;
-    } else {
-      segments.splice(1, 0, lng);
-    }
-    const newPath = segments.join('/') || '/';
-    router.push(newPath);
-  };
+  // No need for handleChangeLang, use <Link> for locale switching
 
   return (
     <div className="fixed top-4 left-1/2 transform -translate-x-1/2 z-50 w-11/12 max-w-6xl">
@@ -141,26 +133,43 @@ export default function Navbar() {
               tabIndex={0}
               className="dropdown-content bg-white text-gray-800 rounded-lg shadow-lg border border-gray-200 mt-2 w-36 p-0"
             >
-              {languages.map((l) => (
-                <li key={l.code}>
-                  <button
-                    className={`flex items-center gap-2 px-4 py-2 text-sm hover:bg-gray-100 font-medium w-full text-left ${locale === l.code ? 'bg-gray-100' : ''}`}
-                    onClick={() => handleChangeLang(l.code)}
-                  >
-                    <Image
-                      src={l.flag}
-                      alt={l.label}
-                      width={18}
-                      height={13}
-                      className="rounded-sm object-cover"
-                    />
-                    <span className="ml-2">{l.label}</span>
-                    {locale === l.code && (
-                      <svg className="w-3 h-3 ml-auto text-blue-600" fill="none" stroke="currentColor" strokeWidth="3" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" /></svg>
-                    )}
-                  </button>
-                </li>
-              ))}
+              {languages.map((l, idx) => {
+                // Build new path with locale replaced
+                const segments = pathname.split('/');
+                if (languages.some(lang => lang.code === segments[1])) {
+                  segments[1] = l.code;
+                } else {
+                  segments.splice(1, 0, l.code);
+                }
+                const newPath = segments.join('/') || '/';
+                // Add rounded classes to first and last item for full dropdown effect
+                const rounded = idx === 0
+                  ? 'rounded-t-lg'
+                  : idx === languages.length - 1
+                  ? 'rounded-b-lg'
+                  : '';
+                return (
+                  <li key={l.code} className="overflow-hidden">
+                    <Link
+                      href={newPath}
+                      locale={l.code}
+                      className={`flex items-center gap-2 px-4 py-2 text-sm font-medium w-full text-left transition-all duration-200 ${rounded} ${locale === l.code ? 'bg-gray-100' : ''} hover:bg-gray-100 focus:bg-gray-100`}
+                    >
+                      <Image
+                        src={l.flag}
+                        alt={l.label}
+                        width={18}
+                        height={13}
+                        className="rounded-sm object-cover"
+                      />
+                      <span className="ml-2">{l.label}</span>
+                      {locale === l.code && (
+                        <svg className="w-3 h-3 ml-auto text-blue-600" fill="none" stroke="currentColor" strokeWidth="3" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" /></svg>
+                      )}
+                    </Link>
+                  </li>
+                );
+              })}
             </ul>
           </div>
           <button className="btn bg-white text-blue-700 hover:bg-blue-50 hover:text-blue-800 rounded-2xl transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 font-semibold text-[15px] px-5 py-2 border-0 relative overflow-hidden group min-h-0 h-10">
