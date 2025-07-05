@@ -4,7 +4,7 @@ import { Home, Newspaper, Settings, Phone, Menu } from "lucide-react";
 export default function Navbar() {
   return (
     <div className="fixed top-4 left-1/2 transform -translate-x-1/2 z-50 w-11/12 max-w-6xl">
-      <div className="navbar bg-gradient-to-r from-blue-600 via-blue-700 to-blue-800 text-white shadow-2xl rounded-3xl border border-blue-400/30 backdrop-blur-sm">
+      <div className="navbar min-h-[56px] py-0 bg-gradient-to-r from-blue-600 via-blue-700 to-blue-800 text-white shadow-2xl rounded-3xl border border-blue-400/30 backdrop-blur-sm">
         <div className="navbar-start">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden text-white hover:bg-white/20 rounded-2xl transition-all duration-300 hover:scale-105">
@@ -40,15 +40,15 @@ export default function Navbar() {
             </ul>
           </div>
           {/* Logo */}
-          <div className="flex items-center ml-2">
-            <div className="relative">
+          <div className="flex items-center ml-2 h-14">
+            <div className="relative h-12 w-[110px] flex items-center">
               <div className="absolute inset-0 bg-white/20 rounded-xl blur-sm"></div>
               <Image
                 src="/img/logo2.png"
                 alt="Company Logo"
-                width={140}
-                height={100}
-                className="rounded-xl object-contain relative z-10 transition-all duration-300 hover:scale-105"
+                width={110}
+                height={48}
+                className="rounded-xl object-contain relative z-10 transition-all duration-300 hover:scale-105 h-12 w-[110px]"
               />
             </div>
           </div>
@@ -79,7 +79,7 @@ export default function Navbar() {
           </ul>
         </div>
         <div className="navbar-end mr-2">
-          <button className="btn bg-white text-blue-700 hover:bg-blue-50 hover:text-blue-800 rounded-2xl transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 font-semibold text-lg px-8 py-3 border-0 relative overflow-hidden group">
+          <button className="btn bg-white text-blue-700 hover:bg-blue-50 hover:text-blue-800 rounded-2xl transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 font-semibold text-lg px-6 py-2 border-0 relative overflow-hidden group min-h-0 h-11">
             <span className="absolute inset-0 bg-gradient-to-r from-blue-100 to-white opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
             <span className="relative z-10 flex items-center gap-2">
               <Phone className="h-5 w-5" />
