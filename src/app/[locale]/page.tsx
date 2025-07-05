@@ -1,5 +1,5 @@
 
-import { useTranslations } from 'next-intl';
+import { NextIntlClientProvider, useTranslations } from 'next-intl';
 import Image from "next/image";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/landing/Hero";

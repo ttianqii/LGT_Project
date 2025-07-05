@@ -51,19 +51,16 @@ export default function Navbar() {
             >
               <li>
                 <a className="hover:bg-blue-100 rounded-xl py-3 px-4 transition-all duration-300 hover:scale-105 font-semibold flex items-center gap-3 text-[#000080]">
-                  <Home className="h-5 w-5" />
                   {t('home')}
                 </a>
               </li>
               <li>
                 <a className="hover:bg-blue-100 rounded-xl py-3 px-4 transition-all duration-300 hover:scale-105 font-semibold flex items-center gap-3">
-                  <Newspaper className="h-5 w-5" />
                   {t('news')}
                 </a>
               </li>
               <li>
                 <a className="hover:bg-blue-100 rounded-xl py-3 px-4 transition-all duration-300 hover:scale-105 font-semibold flex items-center gap-3">
-                  <Settings className="h-5 w-5" />
                   {t('services')}
                 </a>
               </li>
@@ -80,19 +77,16 @@ export default function Navbar() {
           <ul className="menu menu-horizontal px-2 text-[#000080] font-semibold">
             <li>
               <a className="hover:bg-blue-100 rounded-xl px-4 py-2 transition-all duration-300 hover:scale-105 flex items-center gap-2 text-[#000080]">
-                <Home className="h-5 w-5" />
                 {t('home')}
               </a>
             </li>
             <li>
               <a className="hover:bg-blue-100 rounded-xl px-4 py-2 transition-all duration-300 hover:scale-105 flex items-center gap-2">
-                <Newspaper className="h-5 w-5" />
                 {t('news')}
               </a>
             </li>
             <li>
               <a className="hover:bg-blue-100 rounded-xl px-4 py-2 transition-all duration-300 hover:scale-105 flex items-center gap-2">
-                <Settings className="h-5 w-5" />
                 {t('services')}
               </a>
             </li>
