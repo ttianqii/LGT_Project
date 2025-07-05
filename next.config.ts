@@ -1,7 +1,14 @@
-import type { NextConfig } from "next";
+import type { NextConfig } from 'next';
+import withNextIntl from 'next-intl/plugin';
+
+// 👇 ระบุ path ไปยัง next-intl config
+const withIntl = withNextIntl('./next-intl.config.ts');
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  experimental: {
+    serverActions: {},
+  },
+  // เพิ่ม config อื่นๆ ได้ที่นี่
 };
 
-export default nextConfig;
+export default withIntl(nextConfig);

@@ -1,0 +1,14 @@
+{
+  "Navbar": {
+    "home": "首页",
+    "news": "新闻",
+    "services": "服务",
+    "contact": "联系"
+  },
+  "Home": {
+    "welcome": "欢迎！",
+    "desc": "探索我们为提升您的网络体验而设计的新功能和组件。",
+    "explore": "立即探索",
+    "features": "功能与组件"
+  }
+}
