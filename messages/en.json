@@ -7,9 +7,22 @@
     "contact": "Contact"
   },
   "Home": {
-    "welcome": "Welcome!",
-    "desc": "Discover our new features and components designed to enhance your web experience.",
-    "explore": "Explore Now",
-    "features": "Features & Components"
+    "welcome": "Your Trusted ASEAN Logistics Partner",
+    "desc": "Total Freight Forwarding & Customs Brokerage Solutions Tailored for Your Business. With Extensive Experience Since 1987",
+    "contact": "Contact Us"
+  },
+  "About": {
+    "about_us": "ABOUT US",
+    "headline": "More than 35 Years of Trusted Logistics",
+    "description": "Union Freight Forwarder has been a key player in Thailand's logistics industry since 1987. Starting from customs brokerage, we have evolved into a total logistics platform offering seamless solutions by air, sea, road and rail.",
+    "card1_title": "Since 1987",
+    "card1_desc1": "Over 35 years in logistics",
+    "card1_desc2": "evolving from customs to 3PL",
+    "card2_title": "Licensed",
+    "card2_desc1": "Accredited Customs Broker",
+    "card2_desc2": "with end-to-end expertise",
+    "card3_title": "ASEAN Cross-Border",
+    "card3_desc1": "Seamless freight across",
+    "card3_desc2": "Thailand, Vietnam, Malaysia, Singapore, etc."
   }
 }
