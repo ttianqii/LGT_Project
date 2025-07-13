@@ -33,7 +33,7 @@ export default function About() {
         {/* Cards Section */}
         <div className="w-full grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Card 1 - Since 1987 */}
-          <div className="group relative  border border-gray-400 rounded-3xl p-10 shadow-card hover:shadow-logistics transition-all duration-500 hover:-translate-y-2">
+          <div className="group relative  border-2 border-gray-200  rounded-3xl p-10 shadow-card hover:shadow-logistics transition-all duration-500 hover:-translate-y-2">
             <div className="flex flex-col items-center text-center">
               <div className="w-20 h-20 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300" style={{background: 'linear-gradient(135deg, #000080 0%, #1a237e 100%)'}}>
                 <Award className="w-10 h-10 text-primary-foreground" />
@@ -52,7 +52,7 @@ export default function About() {
           </div>
 
           {/* Card 2 - Licensed */}
-          <div className="group relative border border-gray-400 rounded-3xl p-10 shadow-card hover:shadow-logistics transition-all duration-500 hover:-translate-y-2">
+          <div className="group relative border-2 border-gray-200 rounded-3xl p-10 shadow-card hover:shadow-logistics transition-all duration-500 hover:-translate-y-2">
             <div className="flex flex-col items-center text-center">
               <div className="w-20 h-20 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300" style={{background: 'linear-gradient(135deg, #000080 0%, #1a237e 100%)'}}>
                 <Shield className="w-10 h-10 text-primary-foreground" />
@@ -71,7 +71,7 @@ export default function About() {
           </div>
 
           {/* Card 3 - ASEAN */}
-          <div className="group relative border border-gray-400 rounded-3xl p-10 shadow-card hover:shadow-logistics transition-all duration-500 hover:-translate-y-2">
+          <div className="group relative border-2 border-gray-200 rounded-3xl p-10 shadow-card hover:shadow-logistics transition-all duration-500 hover:-translate-y-2">
             
             <div className="flex flex-col items-center text-center">
               <div className="w-20 h-20 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300" style={{background: 'linear-gradient(135deg, #000080 0%, #1a237e 100%)'}}>
