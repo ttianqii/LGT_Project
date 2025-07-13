@@ -7,10 +7,10 @@ export default function Hero() {
   console.log('Hero locale:', locale, 'welcome:', t('welcome'));
   return (
     <section className="relative w-full min-h-screen flex items-center justify-center bg-white p-0 overflow-hidden">
-      <div className="relative w-[100vw] h-[100vh] max-w-[100vw] mx-auto p-0 flex flex-col items-center justify-center">
+      <div className="relative w-[100vw] h-[100vh] max-w-[100vw] mx-auto p-0 flex bg-white flex-col items-center justify-center">
         {/* Image with rounded corners, almost full screen, very thin border */}
         <div
-          className="w-full h-full bg-cover bg-center rounded-3xl overflow-hidden shadow-2xl border-8 border-white"
+          className="w-full h-full bg-cover bg-center rounded-3xl overflow-hidden shadow-2xl border-8  border-white"
           style={{ backgroundImage: `url('/img/background1.jpg')` }}
         >
           <div className="w-full h-full bg-black/40 rounded-xl"></div>

@@ -8,7 +8,7 @@ import About from "@/components/landing/About";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-base-100">
+    <div className="min-h-screen bg-white">
       {/* Blue Navbar with Logo */}
       <Navbar />
       {/* Hero Section as Component */}
